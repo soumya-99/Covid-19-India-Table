@@ -5,19 +5,21 @@
     <title>JSON Covid19India.org API</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container table-responsive">
         <div class="jumbotron text-center">
             <h1>Covid-19-India Table</h1>
         </div>
     </div>
     
-    <div class="table-responsive">
+    <div class="container">
 
-    <table class="table table-striped table-bordered" style="text-align: center;">
+    <table class="table table-striped table-bordered table-sm" id="myTable" style="text-align: center;">
     
     <thead>
         <tr>
@@ -74,5 +76,11 @@
     </table>
     </div>
 
+
+    <script>
+        $(document).ready(function(){
+            $('#myTable').DataTable();
+        })
+    </script>
 </body>
 </html>
